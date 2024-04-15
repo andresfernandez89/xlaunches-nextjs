@@ -3,6 +3,9 @@ const getApiUrl = async (path: string) => {
   return response.json();
 };
 
-export async function getAllLauches() {
+export async function getAllLaunches() {
   return await getApiUrl("launches");
+}
+export async function getLaunchById(id: number) {
+  return await getApiUrl(`launches/${id}`);
 }
