@@ -4,7 +4,7 @@ import logo from "@/../public/SpaceX-Logo.svg";
 import Image from "next/image";
 export default function Navbar() {
   return (
-    <div className="flex items-center justify-center max-sm:flex-col">
+    <div className="flex items-center justify-center max-sm:flex-col sm:my-20">
       <Image src={logo} width={275} height={300} alt="SpaceX logo" />
       <div className="flex gap-2 max-sm:mt-5 sm:ml-4">
         <Button asChild>
