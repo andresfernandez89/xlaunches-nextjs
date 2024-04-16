@@ -7,14 +7,14 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { type Launch } from "@/types/Launch";
-export default async function LaunchCard({
+import { type LaunchCardTypes } from "@/types/LaunchProps";
+export default function LaunchCard({
   flightNumber,
   status,
   name,
   date,
   image,
-}) {
+}: LaunchCardTypes) {
   const dateFormatted = date.substring(0, 10);
   return (
     <Card>
