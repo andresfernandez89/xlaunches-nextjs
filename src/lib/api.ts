@@ -1,4 +1,4 @@
-import { type Launch } from "@/types/Launch";
+import { type Launch } from "@/types/LaunchApi";
 const getApiUrl = async (path: string) => {
   const response = await fetch(`https://api.spacexdata.com/v5/${path}`);
   return response.json();
