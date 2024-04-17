@@ -37,7 +37,7 @@ export default function LaunchCard({
             src={image}
             width={140}
             height={140}
-            alt={"foto"}
+            alt={`${name} launch`}
           />
         )}
       </CardContent>
