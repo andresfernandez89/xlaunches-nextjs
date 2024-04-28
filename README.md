@@ -21,7 +21,7 @@ Clone the project
 Go to the project directory
 
 ```bash
-  cd my-project
+  cd xlaunches-nextjs
 ```
 
 Install dependencies
