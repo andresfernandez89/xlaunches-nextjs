@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 export default function Navbar() {
   return (
-    <div className="flex items-center justify-center max-sm:flex-col">
+    <div className="flex h-[130px] items-center justify-center max-sm:flex-col sm:h-[150px]">
       <Image
         src={logo}
         width={275}
@@ -17,7 +17,7 @@ export default function Navbar() {
         }}
         priority
       />
-      <div className="flex gap-3 max-sm:mt-5 sm:ml-4">
+      <div className="flex gap-3 sm:ml-4">
         <Button className="hover:text-base hover:text-white" asChild>
           <Link href="/failed">Failed</Link>
         </Button>
