@@ -1,6 +1,6 @@
 import { getAllLaunches } from "@/lib/api";
-import LaunchCard from "../launchCard/launchCard";
 import { Launch } from "@/types/LaunchApi";
+import LaunchCard from "../launchCard/launchCard";
 
 export default async function LaunchesContainer() {
   const lauches = await getAllLaunches();
