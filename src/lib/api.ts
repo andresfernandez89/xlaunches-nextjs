@@ -1,6 +1,6 @@
 import { type Launch } from "@/types/LaunchApi";
 const getApiUrl = async (path: string) => {
-  const response = await fetch(`https://api.spacexdata.com/v5/${path}`);
+  const response = await fetch(`${process.env.NEXT_PUBLIC_API_URI}${path}`);
   return response.json();
 };
 
