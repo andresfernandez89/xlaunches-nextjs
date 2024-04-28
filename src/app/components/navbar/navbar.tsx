@@ -17,11 +17,11 @@ export default function Navbar() {
         }}
         priority
       />
-      <div className="flex gap-2 self-end max-sm:mt-5 sm:ml-4">
-        <Button asChild>
+      <div className="flex gap-3 max-sm:mt-5 sm:ml-4">
+        <Button className="hover:text-base hover:text-white" asChild>
           <Link href="/failed">Failed</Link>
         </Button>
-        <Button asChild>
+        <Button className="hover:text-base hover:text-white" asChild>
           <Link href="/succeeded">Succeeded</Link>
         </Button>
       </div>
