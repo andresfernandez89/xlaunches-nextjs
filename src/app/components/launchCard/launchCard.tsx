@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { Badge } from "@/components/ui/badge";
 import {
   Card,
   CardContent,
@@ -6,8 +6,8 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { type LaunchCardTypes } from "@/types/LaunchProps";
+import Image from "next/image";
 export default function LaunchCard({
   flightNumber,
   status,
@@ -17,7 +17,7 @@ export default function LaunchCard({
 }: LaunchCardTypes) {
   const dateFormatted = date.substring(0, 10);
   return (
-    <Card>
+    <Card className="grid">
       <CardHeader>
         <Badge className="pointer-events-none w-fit text-sm">
           #{flightNumber}
@@ -27,10 +27,12 @@ export default function LaunchCard({
         >
           {status ? "Successful" : "Failed"}
         </Badge>
-        <CardTitle className="text-md">{name}</CardTitle>
+        <CardTitle className="text-md ... w-36 overflow-hidden text-ellipsis whitespace-nowrap sm:w-28">
+          {name}
+        </CardTitle>
         <CardDescription>{dateFormatted}</CardDescription>
       </CardHeader>
-      <CardContent className="h-auto">
+      <CardContent className="h-auto self-end">
         {image && (
           <Image
             className={"m-auto h-full"}
@@ -38,6 +40,7 @@ export default function LaunchCard({
             width={140}
             height={140}
             alt={`${name} launch`}
+            style={{ objectFit: "cover" }}
           />
         )}
       </CardContent>
