@@ -1,4 +1,4 @@
-import { type Launch, type Links, type Patch } from "./LaunchApi";
+import { type Launch, type Patch } from "./LaunchApi";
 
 export interface LaunchCardTypes {
   id: Launch["id"];
@@ -7,6 +7,4 @@ export interface LaunchCardTypes {
   status: Launch["success"];
   image: Patch["small"];
   date: Launch["date_utc"];
-  webcast: Links["webcast"];
-  wikipedia: Links["wikipedia"];
 }
