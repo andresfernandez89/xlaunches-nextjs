@@ -15,7 +15,6 @@ export default async function LaunchesContainer() {
           status={launch.success}
           image={launch.links.patch.small}
           date={launch.date_utc}
-          webcast={launch.links.webcast}
         />
       ))}
     </section>
