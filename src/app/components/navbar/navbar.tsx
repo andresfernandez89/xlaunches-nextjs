@@ -5,18 +5,20 @@ import Link from "next/link";
 export default function Navbar() {
   return (
     <div className="flex items-center justify-center max-sm:flex-col">
-      <Image
-        src={logo}
-        width={275}
-        height={150}
-        alt="SpaceX logo"
-        style={{
-          objectFit: "cover",
-          width: "275px",
-          height: "150px",
-        }}
-        priority
-      />
+      <Link href="/">
+        <Image
+          src={logo}
+          width={275}
+          height={150}
+          alt="SpaceX logo"
+          style={{
+            objectFit: "cover",
+            width: "275px",
+            height: "150px",
+          }}
+          priority
+        />
+      </Link>
       <div className="flex gap-3 max-sm:mb-[20px] sm:ml-4">
         <Button className="hover:text-base hover:text-white" asChild>
           <Link href="/failed">Failed</Link>
