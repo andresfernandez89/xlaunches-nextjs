@@ -7,6 +7,6 @@ const getApiUrl = async (path: string) => {
 export async function getAllLaunches(): Promise<Launch[]> {
   return await getApiUrl("launches");
 }
-export async function getLaunchById(id: number): Promise<Launch> {
+export async function getLaunchById(id: Pick<Launch, "id">): Promise<Launch> {
   return await getApiUrl(`launches/${id}`);
 }
